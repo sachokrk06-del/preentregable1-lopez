@@ -2,32 +2,48 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import TituloPrincipal from './componentes/TiuloPrincipal/TituloPrincipal'
+import { Boton } from './componentes/Boton/Boton'
+import { ItemCount } from './componentes/contador/ItemCount'
+import { NavBar } from './componentes/NavBar/NavBar'
+import { CartWidget } from './componentes/CartWidget/CartWidget'
+import { ItemListContainer } from './componentes/ItemListContainer/ItemListContainer'
 
 function App() {
   const [count, setCount] = useState(0)
 
+  let cantidad = 10
+  const celular = {
+    marca: "samsung",
+    precio:"5000"
+  }
+
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn mor
-      </p>
+      <NavBar/>
+      <ItemListContainer comunicado = "holaaa"/>
+
+
+
+
+
+      {/* <ItemCount stock={20}/>
+      <hr />
+      <ItemCount stock={15}/> */}
+
+
+
+      {/* <header className='colorFondo'>
+        <h1>hola tienda hoy hay {cantidad} usuarios comprando</h1>  
+        <nav>
+          <TituloPrincipal saludo="esto es una props" producto={celular}/> 
+          <Boton texto="agregar"/>
+          <Boton texto= "eliminar"/>
+           <Boton texto= "salir"/>
+        </nav>
+
+        
+      </header> */}
     </>
   )
 }
