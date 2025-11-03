@@ -4,12 +4,12 @@ import { CartWidget } from '../CartWidget/CartWidget'
 export const NavBar = () => {
   return (
     <header>
-        <h1>marolio online</h1>
+        <h1>MI TIENDA</h1>
         <nav>
             <ul>
-                <li>lacteos</li>
-                <li>bebidas</li>
-                <li>almacen</li>
+                <li>Celulares</li>
+                <li>Electrodomesticos</li>
+                <li>Perfumes</li>
             </ul>
         </nav>
         <CartWidget/>
